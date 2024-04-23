@@ -1,0 +1,22 @@
+{
+  // This is a comment explaining the purpose of the tsconfig file
+  "compilerOptions": {
+    // Compiler options configuration
+    "target": "es5",
+    "module": "commonjs",
+    // More options...
+  },
+  // This section specifies which files to include in compilation
+  "include": [
+    "src/**/*.ts"
+  ],
+  // This section specifies which files to exclude from compilation
+  "exclude": [
+    "node_modules"
+  ],
+  // Another comment
+  "references": [
+    // Referenced projects configuration
+  ]
+}
+
