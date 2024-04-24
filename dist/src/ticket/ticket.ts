@@ -1,16 +1,36 @@
-export class Ticket{
+class Ticket {
     private ticketId: string;
-    private price: number;
-    private seatNumber: number;
-    private flightId: string;
     private passengerId: string;
-
-    constructor(ticketId: string, price: number, seatNumber: number, flightId: string, passengerId: string){
+    private destination: Airport[];
+    private price: number;
+    private flightId: string;
+    constructor(ticketId: string, passengerId: string, destination: Airport[], price: number, flightId: string){
         this.ticketId = ticketId;
-        this.price = price;
-        this.seatNumber = seatNumber;
-        this.flightId = flightId;
         this.passengerId = passengerId;
+        this.destination = destination;
+        this.price = price;
+        this.flightId = flightId;
     }
+    public getTicketDetail(){
+        return {
+            ticketId: this.ticketId,
+            passengerId: this.passengerId,
+            destination: this.destination,
+            price: this.price,
+            flightId: this.flightId,
+        }
+    }
+    public getBooking(){
+        return {
+            ticketId: this.ticketId,
+            passengerId: this.passengerId,
+            destination: this.destination,
+            price: this.price,
+            flightId: this.flightId,
+            status: "confirmed",
+            bookingDate: new Date(),
+        }
+    }
+    
 
 }
