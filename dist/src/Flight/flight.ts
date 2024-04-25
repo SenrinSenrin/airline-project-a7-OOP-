@@ -16,5 +16,5 @@ export class Flight {
         this.Price = Price;
         
     }
-    public FlightDetails(){};
+    public FlightDetails(){}; //get flight details
 }
