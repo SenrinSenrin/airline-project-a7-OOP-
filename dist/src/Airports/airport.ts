@@ -1,4 +1,4 @@
-class Airport {
+export class Airport {
     private airportName: string;
     private cityName: string;
     private area: string; // Assuming Area is a string type, replace with appropriate type if needed
