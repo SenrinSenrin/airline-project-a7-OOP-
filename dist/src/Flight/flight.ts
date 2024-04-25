@@ -1,6 +1,6 @@
 import { flightNumber } from "../flightNumber/flightNumber";
 
-class Flight {
+export class Flight {
     private FlightId: string;
     private FlightNumber: flightNumber;
     private StartTime: Date;
