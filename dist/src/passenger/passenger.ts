@@ -1,5 +1,5 @@
 import { Baggage } from "../baggage/baggage";
-import { Ticket } from "../Ticket/ticket";
+import { Ticket } from "../ticket/ticket";
 
 export class Passengers{
     private passengerId: string;
