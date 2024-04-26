@@ -1,8 +1,17 @@
+import { Airport } from "./Airports/airport";
+import { Passengers } from "./persons/passenger/passenger";
+import { Baggage } from "./baggage/baggage";
 import { Ticket } from "./ticket/ticket";
-import { Passengers } from "./person/person";
-import { Crew } from "./person/person";
 
-let ChaTicket = new Ticket("lsdk122", 1234, 4, "234ldfk","1234fghj")
-let Char = new Passengers("Cha", 23, ChaTicket)
+let PPAirports = new Airport("PPAirports", "PP", "akdlsdkfl123");
+let Ticket1 = new Ticket("TK11", "01PP",123, "123")
+Ticket1.getDestination(PPAirports)
+let Pass1Baggage = new Baggage(12, "123")
+let Passenger1 = new Passengers("01PP","Senrin",22,Ticket1)
+Pass1Baggage.getPassengerId(Passenger1.getPassId)
+Passenger1.addBaggage(Pass1Baggage)
 
-console.log(Char);
+console.log(Passenger1)
+
+
+

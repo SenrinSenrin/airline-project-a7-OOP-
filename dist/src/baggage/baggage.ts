@@ -1,12 +1,17 @@
-import { Passengers } from "../person/person";
+import { Passengers } from "../persons/passenger/passenger";
 
 export class Baggage{
     private BaggageId: number
-    private PassengerId: Passengers[]
-    private FlightId: number
-    constructor(BaggageId:number, flightId: number){
+    private PassengerId: string
+    private FlightId: string
+    constructor(BaggageId:number, flightId: string){
         this.BaggageId = BaggageId
         this.FlightId = flightId
+        this.PassengerId = ''
+    }
+
+    getPassengerId(passId){
+        this.PassengerId = passId
     }
     public BaggageDetails(){}
     public BaggageStatus(){}
