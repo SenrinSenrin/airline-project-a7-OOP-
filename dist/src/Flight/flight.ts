@@ -1,20 +1,38 @@
-import { flightNumber } from "../flightNumber/flightNumber";
+import { FlightNumber } from "./flightNumber";
+import { DateTime } from "./Date";
+import { Routs } from "./Route";
+
+export enum AirplaneType {
+    Boeing737,
+    Boeing747,
+    Boeing767,
+    Boeing777,
+    Boeing787,
+    Boeing797,
+    Boeing800,
+    Boeing807,
+    Boeing817,
+    Boeing827,
+} 
 
 export class Flight {
-    private FlightId: string;
-    private FlightNumber: flightNumber;
-    private StartTime: Date;
-    private ReachingTime: Date; //start time until arrive time
-    private Destination: string;
-    private Price: number;
-    constructor(FlightId:string, FlightNumber:flightNumber, StartTime:Date,Destination:string, ReachingTime:Date,Price:number) {
+    FlightId: string;
+    FlightNumber: FlightNumber[] = [];
+    Airplane: AirplaneType;
+    StartingTime: Date;
+    ReachingTime: Date;
+    Destination: Routs;
+
+    constructor(FlightId: string, Airplane: AirplaneType, StartingTime: Date, ReachingTime: Date, routes: Routs) {
         this.FlightId = FlightId;
-        this.FlightNumber = FlightNumber;
-        this.StartTime = StartTime;
+        this.Airplane = Airplane;
+        this.StartingTime = StartingTime;
         this.ReachingTime = ReachingTime;
-        this.Destination = Destination;
-        this.Price = Price;
-        
+        this.Destination = routes;
+    }
+
+    addFlightNumber(AlineCode: string, FlightCode: string){
+        this.FlightNumber.push(new FlightNumber(AlineCode, FlightCode));
     }
     public FlightDetails(){}; //get flight details
 }

@@ -1,23 +1,18 @@
-import { Baggage } from "../../baggage/baggage";
-import {Ticket} from "../../ticket/ticket";
-export class Passengers{
-    private passengerId: string;
-    private name: string;
-    private age: number;
-    private ticketId: Ticket;
-    Baggage: Baggage[];
-    constructor(passengerId: string,name: string,age: number,ticketId: Ticket){
-        this.passengerId = passengerId;
-        this.name = name;
-        this.age=age;
-        this.ticketId=ticketId;
-        this.Baggage = [];
+import { Persons } from "../Person";
+import { Baggage } from "./Baggage";
+import { Booking } from "../../Booking/Booking"
+
+import { Genders } from "../Person";
+export class Passengers extends Persons{
+    Booking: Booking[] = [];
+    Baggage: Baggage[] = [];
+    constructor(passengerId: string, FirstName: string, LastName: string, Age: number, Gender: Genders){
+        super(FirstName, LastName, Age, Gender)
     }
 
-    getPassId(){
-        return this.passengerId;
+    addBooking(booking: Booking){
+        this.Booking.push(booking)
     }
-
     addBaggage(baggage: Baggage){
         this.Baggage.push(baggage)
     }

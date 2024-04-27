@@ -1,56 +1,39 @@
-import { Passengers } from "../passenger/passenger";
-import { Ticket } from "../Ticket/ticket";
+import { Passengers } from "../Persons/Passenger/Passenger";
+import { Trips } from "../Flight/Trip";
+import { Tickets } from "../Tickets/ticket";
+
 
 export class Booking {
-  private bookingId: string;
-  private Passenger: Passengers;
-  private bookingDate: Date;
-  private status: string;
-  private Tickets: Ticket[]; // Change Ticket to Tickets
+  private Price: number;
+  BookingId: string;
+  Trip: Trips[] = [];
+  Passenger: Passengers[] = [];
+  Tickettype: Tickets[] = [];
 
-  constructor(bookingId: string, passenger: Passengers, bookingDate: Date, status: string) {
-    this.bookingId = bookingId;
-    this.Passenger = passenger;
-    this.bookingDate = bookingDate;
-    this.status = status;
-    this.Tickets = []; // Initialize Tickets array with the provided ticket
+  constructor(Price: number, BookingId: string) {
+    this.Price = Price;
+    this.BookingId = BookingId;
   }
 
-  public addTicket(ticket: Ticket): void {
-    this.Tickets.push(ticket); // Add the provided ticket to the Tickets array
-  }
-
-  public getTickets(){
-    return this.Tickets;
-  }
-  
   public getBookingDetails(){
     return{
-      bookingId: this.bookingId,
-      bookingDate: this.bookingDate,
-      status: this.status,
-      tickets: this.Tickets.map(ticket => ticket.getTicketDetail())
+      Price: this.Price,
+      BookingId: this.BookingId,
+      Trip: this.Trip,
+      Passenger: this.Passenger,
+      Tickettype: this.Tickettype
     }
   }
 
-  public cacalculateTotalPrice(){
-    let totalPrice = 0;
-    for (let ticket of this.Tickets){
-      totalPrice += ticket.getBooking().price;
-    }
-    return totalPrice;
+  addTicket(ticket: Tickets){
+    this.Tickettype.push(ticket)
   }
 
-  public getPassenger(){
-    if(this.Tickets.length > 0){
-      return this.Tickets[0].Passenger;
-    }else{
-      return null;
-    }
+  addTrip(trip: Trips){
+    this.Trip.push(trip)
   }
 
-  public getBookingDate(){
-    return this.bookingDate;
+  addPassenger(passenger: Passengers){
+    this.Passenger.push(passenger)
   }
-
 }

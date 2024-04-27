@@ -1,17 +1,42 @@
-import { Airport } from "./Airports/airport";
-import { Passengers } from "./persons/passenger/passenger";
-import { Baggage } from "./baggage/baggage";
-import { Ticket } from "./ticket/ticket";
+// As an airport controller, I need to get the full details of a passenger’s trip from their Booking 
+// Reference Number (flights, bags, customer information…
 
-let PPAirports = new Airport("PPAirports", "PP", "akdlsdkfl123");
-let Ticket1 = new Ticket("TK11", "01PP",123, "123")
-Ticket1.getDestination(PPAirports)
-let Pass1Baggage = new Baggage(12, "123")
-let Passenger1 = new Passengers("01PP","Senrin",22,Ticket1)
-Pass1Baggage.getPassengerId(Passenger1.getPassId)
-Passenger1.addBaggage(Pass1Baggage)
+import { Passengers } from "./Persons/Passenger/Passenger";
+import { Trips } from "./Flight/Trip";
+import { Booking } from "./Booking/Booking";
+import { Tickets } from "./Tickets/ticket";
+import { Flight } from "./Flight/Flight";
+import { Routs } from "./Flight/Route";
+import { DateTime } from "./Flight/Date";
+import { Bookingtype } from "./Tickets/ticket";
+import { AirplaneType } from "./Flight/Flight";
+import { Genders } from "./Persons/Person";
 
-console.log(Passenger1)
+
+// ====================OBJECT===========================
+let passenger1 = new Passengers("Pas01", "Senrin", "Sim", 23, Genders.Male);
+let trip1 = new Trips("Trip1PPBK");
+let booking1 = new Booking(123, "001BPP")
+let ticket1 = new Tickets("T001BK", Bookingtype.NORETURNTICKET);
+let route1 = new Routs("PP", "BK")
+let dateS1 = new Date(2024, 3, 27, 15, 30, 0);
+let dateA1 = new Date(2024, 3, 27, 15, 30, 0);
+let flight1 = new Flight("F00Boing", AirplaneType.Boeing737, dateS1, dateA1, route1)
+
+
+// ====================FUNCTION===========================
+trip1.addFlight(flight1);
+trip1.addBooking(booking1);
+booking1.addTrip(trip1);
+booking1.addTicket(ticket1);
+booking1.addPassenger(passenger1);
+passenger1.addBooking(booking1);
+
+console.log(passenger1);
+
+
+
+
 
 
 

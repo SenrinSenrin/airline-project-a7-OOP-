@@ -1,4 +1,6 @@
-export class flightNumber {
+
+
+export class FlightNumber {
     private AlineCode: String
     private FlightCode: String
     constructor(AlineCode: String, FlightCode: String) {
