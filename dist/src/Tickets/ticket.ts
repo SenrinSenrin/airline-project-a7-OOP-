@@ -1,8 +1,8 @@
 import { Airport } from "../Airports/airport";
 
 export enum Bookingtype {
-    RETURNTICKET,
-    NORETURNTICKET,
+    RETURNTICKET = "Returnticket",
+    NORETURNTICKET = "No returnticket",
 }
 
 export class Tickets {

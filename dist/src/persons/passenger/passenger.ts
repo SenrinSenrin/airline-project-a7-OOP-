@@ -16,6 +16,15 @@ export class Passengers extends Persons{
     addBaggage(baggage: Baggage){
         this.Baggage.push(baggage)
     }
-    public PassengerDetails(){}
+    public PassengerDetails(){
+        console.log (
+            this.FirstName &&
+            this.LastName &&
+            this.Age &&
+            this.Gender &&
+            this.Booking &&
+            this.Baggage
+        );
+    }
     public Checkin(){}
 }

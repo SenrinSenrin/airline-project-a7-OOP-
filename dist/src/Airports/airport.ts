@@ -1,24 +1,27 @@
+import { Airlines } from "../Airline/ailine";
+import { Flight } from "../Flight/Flight";
+import { Gate } from "../Flight/Gate";
+
 export class Airport {
-    private airportName: string;
-    private cityName: string;
-    private area: string; // Assuming Area is a string type, replace with appropriate type if needed
+    name: string
+    airlines: Airlines[] = [];
+    flights: Flight[] = [];
+    gates: Gate[] = [];
 
-    constructor(airportName: string, cityName: string, area: string) {
-        this.airportName = airportName;
-        this.cityName = cityName;
-        this.area = area;
+    constructor(name: string) {
+        name = name.toLowerCase();
     }
 
-    // Getter methods
-    public getAirportName(): string {
-        return this.airportName;
+    addAirline(airline: Airlines) {
+        this.airlines.push(airline);
     }
 
-    public getCityName(): string {
-        return this.cityName;
+    addFlight(flight: Flight) {
+        this.flights.push(flight);
     }
 
-    public getArea(): string {
-        return this.area;
+    addGate(gate: Gate) {
+        this.gates.push(gate);
     }
+    
 }
