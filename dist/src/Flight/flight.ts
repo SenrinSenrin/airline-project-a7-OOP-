@@ -1,4 +1,4 @@
-import { FlightNumber } from "./flightNumber";
+import { FlightNumber } from "./FlightNumber";
 import { DateTime } from "./Date";
 import { Routs } from "./Route";
 
