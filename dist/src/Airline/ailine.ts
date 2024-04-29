@@ -9,14 +9,16 @@ export class Airlines {
     Name: string
     Employees: Employee[] = [];
     Trips: Trips[] = [];
-    Airplans: AirplaneType;
+    Airplans: AirplaneType[] = [];
 
-    constructor(name: string, Airplane: AirplaneType) {
+    constructor(name: string) {
         this.Name = name;
-        this.Airplans = Airplane;
     }
     addEmployee(employee: Employee) {
         this.Employees.push(employee);
+    }
+    addAirplane(airplane: AirplaneType) {
+        this.Airplans.push(airplane);
     }
 
     addTrip(trip: Trips) {
@@ -43,10 +45,9 @@ export class Airlines {
                 
             }
             return (
-                `From ${this.Name}has:\n
-                Flight number: ${flightNumber}\n
-                passenger number: ${passReturnNumber}
-                `
+                'From ['+this.Name + '] has:' + '\n'+
+                'Flight number:' + flightNumber + '\n'+
+                'Passenger number:' + passReturnNumber
             )
             
         }
@@ -56,5 +57,13 @@ export class Airlines {
             console.log(passReturn);
             
         }
+    }
+
+    getTotalSalariesOfEmployees(){
+        let totalSalary = 0;
+        for (let employee of this.Employees){
+            totalSalary += employee.getSalary();
+        }
+        return `${this.Name} need to pay $${totalSalary} per month for employee!`;
     }
 }
