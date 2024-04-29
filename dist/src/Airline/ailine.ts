@@ -1,6 +1,6 @@
 
 import { Trips } from "../Flight/Trip";
-import { Employee } from "../Persons/Employees/Employee";
+import { Employee } from "../persons/Employees/employee";
 import { AirplaneType } from "../Flight/Flight";
 import { Bookingtype } from "../Tickets/ticket";
 

@@ -14,7 +14,7 @@ import { Genders } from "./Persons/Person";
 
 import { Airlines } from "./Airline/ailine";
 import { Airplane } from "./Flight/Airplan";
-import { Employee } from "./Persons/Employees/Employee";
+import { Employee } from "./persons/Employees/employee";
 
 
 // ====================OBJECT===========================

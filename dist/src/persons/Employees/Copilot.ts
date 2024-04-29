@@ -1,5 +1,5 @@
 
-import { Employee } from "./Employee";
+import { Employee } from "./employee";
 import { Genders } from "../Person";
 
 export class CoPilot extends Employee {

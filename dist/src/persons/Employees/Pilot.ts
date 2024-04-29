@@ -1,5 +1,5 @@
 
-import { Employee } from "./Employee";
+import { Employee } from "./employee";
 import { Genders } from "../Person";
 
 export class Pilot extends Employee {
@@ -7,4 +7,5 @@ export class Pilot extends Employee {
         super(FirstName, LastName, Age, Gender, salary);
         this.Flights = [];
     }
+
 }
