@@ -1,5 +1,4 @@
 import { FlightNumber } from "./flightNumber";
-import { DateTime } from "./Date";
 import { Routs } from "./Route";
 
 export enum AirplaneType {
