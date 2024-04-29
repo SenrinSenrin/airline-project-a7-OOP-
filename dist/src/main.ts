@@ -1,7 +1,7 @@
 // As an airport controller, I need to get the full details of a passenger’s trip from their Booking 
 // Reference Number (flights, bags, customer information…
 
-import { Passengers } from "./Persons/Passenger/Passenger";
+import { Passengers } from "./persons/passenger/passenger";
 import { Trips } from "./Flight/Trip";
 import { Booking } from "./Booking/Booking";
 import { Tickets } from "./Tickets/ticket";
