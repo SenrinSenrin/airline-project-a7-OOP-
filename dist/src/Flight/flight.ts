@@ -1,5 +1,6 @@
 import { FlightNumber } from "./flightNumber";
 import { Routs } from "./Route";
+import { Gate } from "./Gate";
 
 export enum FlightId {
     F001Boeing = 'F001Boeing',
@@ -25,13 +26,15 @@ export enum AirplaneType {
 
 export class Flight {
     FlightId: FlightId;
+    Gate: Gate;
     Airplane: AirplaneType;
     StartingTime: Date;
     ReachingTime: Date;
     Destination: Routs;
 
-    constructor(FlightId: FlightId, Airplane: AirplaneType, StartingTime: Date, ReachingTime: Date, routes: Routs) {
+    constructor(FlightId: FlightId,gate:Gate, Airplane: AirplaneType, StartingTime: Date, ReachingTime: Date, routes: Routs) {
         this.FlightId = FlightId;
+        this.Gate = gate;
         this.Airplane = Airplane;
         this.StartingTime = StartingTime;
         this.ReachingTime = ReachingTime;

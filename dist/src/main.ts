@@ -1,22 +1,24 @@
 // As an airport controller, I need to get the full details of a passenger’s trip from their Booking 
 // Reference Number (flights, bags, customer information…
-
+import { Airport } from "./Airports/airport";
 import { Passengers } from "./Persons/Passenger/passenger";
 import { Trips } from "./Flight/Trip";
 import { Booking } from "./Booking/Booking";
 import { Tickets } from "./Tickets/ticket";
-import { Flight } from "./Flight/Flight";
+import { Flight } from "./Flight/flight";
 import { Routs } from "./Flight/Route";
 import { Genders } from "./Persons/person";
 import { Airlines } from "./Airline/ailine";
 import { Pilot } from "./Persons/Employees/Pilot";
 import { Mananger } from "./Persons/Employees/Mananger";
+import { Gate } from "./Flight/Gate";
 
 // _____________________ENUMS_____________________________//
 import { Bookingtype } from "./Tickets/ticket";
-import { AirplaneType } from "./Flight/Flight";
-import { EmployeeRole } from "./Persons/Employees/employee";
-import { FlightId } from "./Flight/Flight";
+import { AirplaneType } from "./Flight/flight";
+import { EmployeeRole } from "./Persons/Employees/Employee";
+import { FlightId } from "./Flight/flight";
+
 
 
 // ====================OBJECT===========================
@@ -25,7 +27,13 @@ import { FlightId } from "./Flight/Flight";
 let dateS1 = new Date(2024, 3, 27, 15, 30, 0);
 let dateA1 = new Date(2024, 3, 27, 15, 30, 0);
 
-// __________________________________CREATE-ROUTE-FOR-FLIGHT___________________________//
+// __________________________________CREATE-AIRPORT_____________________________
+let airport = new Airport("PP Airport");
+
+// _______________________________CREATE-GATE______________________________//
+let gate1 = new Gate(231);
+
+// _____________________________CREATE-ROUTE-FOR-FLIGHT___________________________//
 let route1 = new Routs("PP", "BK")
 
 // ____________________________CREATE-PASSENGERS_______________________________//
@@ -33,15 +41,17 @@ let passenger1 = new Passengers("Pas01", "Senrin", "Sim", 23, Genders.Male);
 
 // ____________________________CREATE-BOOKINGS_______________________________//
 let booking1 = new Booking(123, "001BPP");
+let booking2 = new Booking(123, "003BKK");
 
 // ____________________________CREATE-TRIPS_______________________________//
 let trip1 = new Trips("Trip1PPBK");
 
 // ____________________________CREATE-FLIGHTS_______________________________//
-let flight1 = new Flight(FlightId.F001Boeing, AirplaneType.Boeing737, dateS1, dateA1, route1)
+let flight1 = new Flight(FlightId.F001Boeing, gate1, AirplaneType.Boeing737, dateS1, dateA1, route1)
 
 // ____________________________CREATE-TICKETS_______________________________//
-let ticket1 = new Tickets("T001BK", Bookingtype.RETURNTICKET);
+let ticket1 = new Tickets("T001BK", Bookingtype.NORETURNTICKET);
+let ticket2 = new Tickets("T001BJ", Bookingtype.RETURNTICKET);
 
 // _______________________________CREATE-AIRLINES______________________________//
 let airline1 = new Airlines("Cambodia Airline");
@@ -73,33 +83,46 @@ airline1.addEmployee(mananger);
 // __________________________________EMPLOYEES-METHOD_______________________________//
 pilot1.addFlight(flight1);
 
+// _____________________________________AIRPORT-METHOD_______________________________//
+airport.addAirline(airline1);
+airport.addFlight(flight1);
+airport.addGate(gate1);
+
 // USER STORY 1->
 // =================1. As an airport controller, I need to get the full details of a passenger’s trip from their Booking 
 // Reference Number (flights, bags, customer information…)==============
-passenger1.getPassengerFullDetails();
+// passenger1.getPassengerFullDetails();
 
 
 /*USER STORY 2->
 // =================2. As an airline manager, I want to know for a given flight, how many passengers have return 
-// tickets.=============
-airline1.getFlightNumPassReturn();
-*/
+// tickets.=============*/
+console.log(airline1.getFlightNumPassReturn());
+console.log(airline1);
+
+
 
 
 /*USER STORY 3->
-// =================3. As an airline pilot, I want to know, for a given date, how many flights I have to join==============
-pilot1.getFlightCountByTime();
-*/
+// =================3. As an airline pilot, I want to know, for a given date, how many flights I have to join==============*/
+// pilot1.getFlightCountByTime();
+
+
 
 /*USER STORY 4->
 // =================4. As an airline chef, I need to know, for a given flight, how many of each meal type I need to 
-prepare.============
-*/
+prepare.============*/
+
 
 /*USER STORY 5->
-// =================5. As an airline manager, I want to find out how much salary I pay all my employees.============
-airline1.getTotalSalariesOfEmployees();
-*/
+=================5. As an airline manager, I want to find out how much salary I pay all my employees.============*/
+// console.log(airline1.getTotalSalariesOfEmployees());
+
+
+/*USER STORY 6->
+===================6. As a passenger, I want to know which gate my plane is waiting at.
+=================*/
+// console.log(passenger1.getGate());
 
 
 
