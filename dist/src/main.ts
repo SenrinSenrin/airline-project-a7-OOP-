@@ -3,7 +3,7 @@
 import { Airport } from "./Airports/airport";
 import { Passengers } from "./Persons/Passenger/passenger";
 import { Trips } from "./Flight/Trip";
-import { Booking } from "./Booking/Booking";
+import { Booking } from "./Booking/booking";
 import { Tickets } from "./Tickets/ticket";
 import { Flight } from "./Flight/flight";
 import { Routs } from "./Flight/Route";

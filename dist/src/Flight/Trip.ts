@@ -1,5 +1,5 @@
 
-import { Booking } from "../Booking/Booking";
+import { Booking } from "../Booking/booking";
 import { Flight } from "./flight";
 
 export class Trips {

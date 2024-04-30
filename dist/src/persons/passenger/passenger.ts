@@ -1,6 +1,6 @@
 import { Persons } from "../person";
 import { Baggage } from "./Baggage";
-import { Booking } from "../../Booking/Booking"
+import { Booking } from "../../Booking/booking"
 
 import { Genders } from "../person";
 export class Passengers extends Persons{
