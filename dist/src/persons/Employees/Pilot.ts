@@ -7,5 +7,8 @@ export class Pilot extends Employee {
         super(FirstName, LastName, Age, Gender, salary);
         this.Flights = [];
     }
+    getPilotDetails() {
+        return `Name: ${this.FirstName + " " + this.LastName}\n Your age: ${this.Age}\n You sex: ${this.Gender}\n Your salary: ${this.Salary}`;
+    }
 
 }
