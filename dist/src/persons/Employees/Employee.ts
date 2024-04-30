@@ -1,7 +1,7 @@
 
-import { Persons } from "../Person";
+import { Persons } from "../person";
 import { Flight } from "../../Flight/Flight";
-import { Genders } from "../Person";
+import { Genders } from "../person";
 
 export enum EmployeeRole {
     Manager = "Manager",
