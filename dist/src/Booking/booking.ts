@@ -1,4 +1,4 @@
-import { Passengers } from "../Persons/Passenger/Passenger";
+import { Passengers } from "../Persons/Passenger/passenger";
 import { Trips } from "../Flight/Trip";
 import { Tickets } from "../Tickets/ticket";
 

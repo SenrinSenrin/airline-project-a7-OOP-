@@ -9,8 +9,8 @@ import { Flight } from "./Flight/Flight";
 import { Routs } from "./Flight/Route";
 import { Genders } from "./Persons/person";
 import { Airlines } from "./Airline/ailine";
-import { Pilot } from "./Persons/Employees/pilot";
-import { Mananger } from "./Persons/Employees/mananger";
+import { Pilot } from "./Persons/Employees/Pilot";
+import { Mananger } from "./Persons/Employees/Mananger";
 
 // _____________________ENUMS_____________________________//
 import { Bookingtype } from "./Tickets/ticket";
