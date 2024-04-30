@@ -11,7 +11,6 @@ export class Tickets {
     constructor(ticketId: string, ticketType: Bookingtype) {
         this.ticketId = ticketId;
         this.Tickettype = ticketType;
-        
     }
 
 

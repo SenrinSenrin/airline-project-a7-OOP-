@@ -9,7 +9,7 @@ export class Passengers extends Persons{
     constructor(passengerId: string, FirstName: string, LastName: string, Age: number, Gender: Genders){
         super(FirstName, LastName, Age, Gender)
     }
-
+    
     addBooking(booking: Booking){
         this.Booking.push(booking)
     }
@@ -46,4 +46,15 @@ export class Passengers extends Persons{
             
         }
     } 
+
+    getGate(){
+        for (let trip of this.Booking){
+            for (let flight of trip.Trip){
+                for (let gate of flight.Flights){
+                    return ('Passenger ' + this.FirstName +' '+ this.LastName + ', your plane is waiting gate number: ' +gate.Gate.gateNumber); 
+                }
+            }
+        }
+        
+    }
 }
