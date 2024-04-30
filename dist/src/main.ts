@@ -3,19 +3,19 @@
 
 import { Passengers } from "./Persons/Passenger/passenger";
 import { Trips } from "./Flight/Trip";
-import { Booking } from "./Booking/Booking";
+import { Booking } from "./Booking/booking";
 import { Tickets } from "./Tickets/ticket";
 import { Flight } from "./Flight/Flight";
 import { Routs } from "./Flight/Route";
 import { Genders } from "./Persons/person";
 import { Airlines } from "./Airline/ailine";
-import { Pilot } from "./Persons/Employees/Pilot";
-import { Mananger } from "./Persons/Employees/Mananger";
+import { Pilot } from "./persons/Employees/Pilot";
+import { Mananger } from "./persons/Employees/mananger";
 
 // _____________________ENUMS_____________________________//
 import { Bookingtype } from "./Tickets/ticket";
 import { AirplaneType } from "./Flight/Flight";
-import { EmployeeRole } from "./Persons/Employees/employee";
+import { EmployeeRole } from "./persons/Employees/employee";
 import { FlightId } from "./Flight/Flight";
 
 
