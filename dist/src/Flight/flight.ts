@@ -1,6 +1,15 @@
 import { FlightNumber } from "./flightNumber";
 import { Routs } from "./Route";
 
+export enum FlightId {
+    F001Boeing = 'F001Boeing',
+    F002Boeing = 'F002Boeing',
+    F003Boeing = 'F003Boeing',
+    F004Boeing = 'F004Boeing',
+    F005Boeing = 'F005Boeing',
+    F006Boeing = 'F006Boeing',
+}
+
 export enum AirplaneType {
     Boeing737,
     Boeing747,
@@ -15,14 +24,13 @@ export enum AirplaneType {
 } 
 
 export class Flight {
-    FlightId: string;
-    FlightNumber: FlightNumber[] = [];
+    FlightId: FlightId;
     Airplane: AirplaneType;
     StartingTime: Date;
     ReachingTime: Date;
     Destination: Routs;
 
-    constructor(FlightId: string, Airplane: AirplaneType, StartingTime: Date, ReachingTime: Date, routes: Routs) {
+    constructor(FlightId: FlightId, Airplane: AirplaneType, StartingTime: Date, ReachingTime: Date, routes: Routs) {
         this.FlightId = FlightId;
         this.Airplane = Airplane;
         this.StartingTime = StartingTime;
@@ -30,8 +38,5 @@ export class Flight {
         this.Destination = routes;
     }
 
-    addFlightNumber(AlineCode: string, FlightCode: string){
-        this.FlightNumber.push(new FlightNumber(AlineCode, FlightCode));
-    }
     public FlightDetails(){}; //get flight details
 }

@@ -25,7 +25,7 @@ export class Airlines {
         this.Trips.push(trip);
     }
 
-    getInforDetails(){
+    getFlightNumPassReturn(){
         let flightNumber = 0
         let passReturnNumber = 0
         for (let passengers of this.Trips) {
@@ -47,7 +47,7 @@ export class Airlines {
             return (
                 'From ['+this.Name + '] has:' + '\n'+
                 'Flight number:' + flightNumber + '\n'+
-                'Passenger number:' + passReturnNumber
+                'Passenger returnt back number:' + passReturnNumber
             )
             
         }

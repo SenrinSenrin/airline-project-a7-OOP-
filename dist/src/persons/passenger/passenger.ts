@@ -33,7 +33,7 @@ export class Passengers extends Persons{
                             console.log('Trip from: ' + tripPlace.Destination.Departure + ' to '+ tripPlace.Destination.Arrival + '\n'+
                                 'Departure time: '+ tripPlace.StartingTime + '\n'+
                                 'Arrival time: '+ tripPlace.ReachingTime + '\n'+
-                                'Flight number: '+ tripPlace.FlightNumber
+                                'Flight number: '+ tripPlace.FlightId
                             );
                             
                         }
