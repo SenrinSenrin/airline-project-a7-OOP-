@@ -1,7 +1,7 @@
 // As an airport controller, I need to get the full details of a passenger’s trip from their Booking 
 // Reference Number (flights, bags, customer information…
 import { Airport } from "./Airports/airport";
-import { Passengers } from "./Persons/Passenger/passenger";
+import { Passengers } from "./persons/passenger/passenger";
 import { Trips } from "./Flight/Trip";
 import { Booking } from "./Booking/booking";
 import { Tickets } from "./Tickets/ticket";
@@ -12,11 +12,12 @@ import { Airlines } from "./Airline/ailine";
 import { Pilot } from "./persons/Employees/Pilot";
 import { Mananger } from "./persons/Employees/Mananger";
 import { Chef } from "./persons/Employees/Chef";
+import { Gate } from "./Flight/Gate";
 
 // _____________________ENUMS_____________________________//
 import { Bookingtype } from "./Tickets/ticket";
 import { AirplaneType } from "./Flight/flight";
-import { EmployeeRole } from "./Persons/Employees/Employee";
+import { EmployeeRole } from "./persons/Employees/Employee";
 import { FlightId } from "./Flight/flight";
 import { mealTypes, Meals } from "./Meals/meal";
 
