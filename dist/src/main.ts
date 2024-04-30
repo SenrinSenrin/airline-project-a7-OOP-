@@ -73,11 +73,11 @@ airline1.addEmployee(mananger);
 // __________________________________EMPLOYEES-METHOD_______________________________//
 pilot1.addFlight(flight1);
 
-/*USER STORY 1->
+// USER STORY 1->
 // =================1. As an airport controller, I need to get the full details of a passenger’s trip from their Booking 
 // Reference Number (flights, bags, customer information…)==============
 passenger1.getPassengerFullDetails();
-*/
+
 
 /*USER STORY 2->
 // =================2. As an airline manager, I want to know for a given flight, how many passengers have return 

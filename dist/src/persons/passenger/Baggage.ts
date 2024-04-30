@@ -1,4 +1,4 @@
-import { Passengers } from "./Passenger";
+import { Passengers } from "./passenger";
 
 export class Baggage{
     private BaggageId: number
