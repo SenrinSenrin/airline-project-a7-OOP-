@@ -15,7 +15,7 @@ import { Mananger } from "./Persons/Employees/Mananger";
 // _____________________ENUMS_____________________________//
 import { Bookingtype } from "./Tickets/ticket";
 import { AirplaneType } from "./Flight/Flight";
-import { EmployeeRole } from "./Persons/Employees/Employee";
+import { EmployeeRole } from "./persons/Employees/employee";
 import { FlightId } from "./Flight/Flight";
 
 
