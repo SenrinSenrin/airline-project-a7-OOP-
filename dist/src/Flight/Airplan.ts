@@ -1,9 +1,9 @@
 
-
+import { AirplaneType } from "./Flight";
 export class Airplane {
-    airplanName: string
+    airplanName: AirplaneType
     // layouts: Layout[]=[];
-    constructor(airplanName: string) {
+    constructor(airplanName: AirplaneType) {
         this.airplanName = airplanName;
     }
 }

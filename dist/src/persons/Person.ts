@@ -4,10 +4,10 @@ export enum Genders{
 }
 
 export class Persons {
-    FirstName: string;
-    LastName: string;
-    Age: number;
-    Gender: Genders;
+    protected FirstName: string;
+    protected LastName: string;
+    protected Age: number;
+    protected Gender: Genders;
 
     constructor(FirstName: string, LastName: string, Age: number, Gender: Genders) {
         this.FirstName = FirstName;
