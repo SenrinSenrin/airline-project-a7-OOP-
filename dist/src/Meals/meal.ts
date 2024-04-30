@@ -1,4 +1,4 @@
-import { Flight } from "../Flight/Flight";
+import { Flight } from "../Flight/flight";
 import { Chef } from "../persons/Employees/Chef";
 
 export enum Meals {

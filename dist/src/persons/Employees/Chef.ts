@@ -1,6 +1,6 @@
 
-import { Employee, EmployeeRole } from "./employee";
-import { Genders } from "../Person";
+import { Employee, EmployeeRole } from "./Employee";
+import { Genders } from "../person";
 import { Passengers } from "../passenger/passenger";
 import { Meals } from "../../Meals/meal";
 
@@ -12,7 +12,7 @@ export class Chef extends Employee{
         super(FirstName, LastName, Age, Gender, salary,department);
         this.Flights = [];
         
-        
+           
     }
     //==================function get meals=====================
     getMeals(meal:Meals){

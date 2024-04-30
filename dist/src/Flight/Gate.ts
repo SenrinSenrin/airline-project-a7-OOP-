@@ -1,4 +1,4 @@
-import { Flight } from "./Flight";
+import { Flight } from "./flight";
 
 export class Gate {
     gateNumber: number;

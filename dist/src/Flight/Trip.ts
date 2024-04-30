@@ -1,6 +1,6 @@
 
-import { Booking } from "../Booking/Booking";
-import { Flight } from "./Flight";
+import { Booking } from "../Booking/booking";
+import { Flight } from "./flight";
 
 export class Trips {
     TripId: string;

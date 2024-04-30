@@ -1,5 +1,5 @@
 
-import { AirplaneType } from "./Flight";
+import { AirplaneType } from "./flight";
 export class Airplane {
     airplanName: AirplaneType
     // layouts: Layout[]=[];
