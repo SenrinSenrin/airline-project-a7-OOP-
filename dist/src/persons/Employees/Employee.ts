@@ -7,7 +7,7 @@ export enum EmployeeRole {
     Manager = "Manager",
     Pilot = "Pilot",
     Copilot = "Copilot",
-    Chief = "Chief",
+    Chef = "Chef",
 }
 
 export class Employee extends Persons {

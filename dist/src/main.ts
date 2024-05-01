@@ -1,23 +1,26 @@
 // As an airport controller, I need to get the full details of a passenger’s trip from their Booking 
 // Reference Number (flights, bags, customer information…
 import { Airport } from "./Airports/airport";
-import { Passengers } from "./Persons/Passenger/passenger";
+import { Passengers } from "./persons/passenger/passenger";
 import { Trips } from "./Flight/Trip";
 import { Booking } from "./Booking/booking";
 import { Tickets } from "./Tickets/ticket";
 import { Flight } from "./Flight/flight";
 import { Routs } from "./Flight/Route";
-import { Genders } from "./Persons/person";
+import { Genders } from "./persons/person";
 import { Airlines } from "./Airline/ailine";
-import { Pilot } from "./Persons/Employees/Pilot";
-import { Mananger } from "./Persons/Employees/Mananger";
+import { Pilot } from "./persons/Employees/Pilot";
+import { Mananger } from "./persons/Employees/Mananger";
+import { Chef } from "./persons/Employees/Chef";
 import { Gate } from "./Flight/Gate";
 
 // _____________________ENUMS_____________________________//
 import { Bookingtype } from "./Tickets/ticket";
 import { AirplaneType } from "./Flight/flight";
-import { EmployeeRole } from "./Persons/Employees/Employee";
+import { EmployeeRole } from "./persons/Employees/Employee";
 import { FlightId } from "./Flight/flight";
+import { mealTypes, Meals } from "./Meals/meal";
+
 
 
 
@@ -62,6 +65,17 @@ let airline1 = new Airlines("Cambodia Airline");
 let pilot1 = new Pilot("Dity", "Trav", 24, Genders.Male, 1243, EmployeeRole.Pilot);
 let mananger = new Mananger("Serin", "Sing", 23, Genders.Male, 1233, EmployeeRole.Manager);
 
+
+// _______________________________CREATE-CHEFS______________________________//
+let chef1 = new Chef("Dity", "Trav", 24, Genders.Male, 1243, EmployeeRole.Chef);
+
+// _______________________________CREATE-MEALS______________________________//
+let meal1 = new Meals("Koko",mealTypes.kosher);
+
+
+
+
+
 // ===============================CALL-FUNCTIONS===========================
 // __________________________________TRIPS-METHOD_______________________________//
 trip1.addFlight(flight1);
@@ -86,10 +100,10 @@ airline1.addEmployee(mananger);
 // __________________________________EMPLOYEES-METHOD_______________________________//
 pilot1.addFlight(flight1);
 
-// _____________________________________AIRPORT-METHOD_______________________________//
-airport.addAirline(airline1);
-airport.addFlight(flight1);
-airport.addGate(gate1);
+// __________________________________CHEFS-METHOD_______________________________//
+chef1.addMeals(meal1);
+chef1.addFlight(flight1);
+
 
 // USER STORY 1->
 // =================1. As an airport controller, I need to get the full details of a passenger’s trip from their Booking 
@@ -114,7 +128,13 @@ airport.addGate(gate1);
 
 /*USER STORY 4->
 // =================4. As an airline chef, I need to know, for a given flight, how many of each meal type I need to 
-prepare.============*/
+prepare.============
+
+console.log(chef1);
+*/
+
+
+
 
 
 /*USER STORY 5->
@@ -126,6 +146,8 @@ prepare.============*/
 ===================6. As a passenger, I want to know which gate my plane is waiting at.
 =================*/
 console.log(passenger1.getGate());
+
+
 
 
 

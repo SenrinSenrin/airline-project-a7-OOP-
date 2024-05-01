@@ -1,22 +1,21 @@
 
 import { Employee, EmployeeRole } from "./Employee";
 import { Genders } from "../person";
-import { Passengers } from "../Passenger/passenger";
 import { Meals } from "../../Meals/meal";
+import { Flight } from "../../Flight/flight";
+
 
 
 export class Chef extends Employee{
-    chefID: string;
-    passengerId: Passengers[] = [];
+    protected meals: Meals[] =[];
     constructor(FirstName: string, LastName: string, Age: number, Gender: Genders, salary: number,department: EmployeeRole) {
-        super(FirstName, LastName, Age, Gender, salary,department);
-        this.Flights = [];
-        
+        super(FirstName, LastName, Age, Gender, salary,department);    
            
     }
-    //==================function get meals=====================
-    getMeals(meal:Meals){
-        return Meals.breakfast;
+    //==================function add meals=====================
+    addMeals(meal:Meals){
+        this.meals.push(meal);
         
     };
+
 }
