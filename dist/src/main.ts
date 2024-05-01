@@ -127,8 +127,8 @@ console.log(airline1);
 // =================4. As an airline chef, I need to know, for a given flight, how many of each meal type I need to 
 prepare.============
 
-console.log(chef1);
 */
+console.log(chef1);
 
 
 
