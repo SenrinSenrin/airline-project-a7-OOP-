@@ -32,6 +32,7 @@ let airport = new Airport("PP Airport");
 
 // _______________________________CREATE-GATE______________________________//
 let gate1 = new Gate(231);
+let gate2 = new Gate(233);
 
 // _____________________________CREATE-ROUTE-FOR-FLIGHT___________________________//
 let route1 = new Routs("PP", "BK")
@@ -48,6 +49,7 @@ let trip1 = new Trips("Trip1PPBK");
 
 // ____________________________CREATE-FLIGHTS_______________________________//
 let flight1 = new Flight(FlightId.F001Boeing, gate1, AirplaneType.Boeing737, dateS1, dateA1, route1)
+let flight2 = new Flight(FlightId.F001Boeing, gate2, AirplaneType.Boeing737, dateS1, dateA1, route1)
 
 // ____________________________CREATE-TICKETS_______________________________//
 let ticket1 = new Tickets("T001BK", Bookingtype.NORETURNTICKET);
@@ -63,6 +65,7 @@ let mananger = new Mananger("Serin", "Sing", 23, Genders.Male, 1233, EmployeeRol
 // ===============================CALL-FUNCTIONS===========================
 // __________________________________TRIPS-METHOD_______________________________//
 trip1.addFlight(flight1);
+trip1.addFlight(flight2);
 trip1.addBooking(booking1);
 
 // __________________________________BOOKING-METHOD_______________________________//
@@ -97,8 +100,8 @@ airport.addGate(gate1);
 /*USER STORY 2->
 // =================2. As an airline manager, I want to know for a given flight, how many passengers have return 
 // tickets.=============*/
-console.log(airline1.getFlightNumPassReturn());
-console.log(airline1);
+// console.log(airline1.getFlightNumPassReturn());
+// console.log(airline1);
 
 
 
@@ -122,7 +125,7 @@ prepare.============*/
 /*USER STORY 6->
 ===================6. As a passenger, I want to know which gate my plane is waiting at.
 =================*/
-// console.log(passenger1.getGate());
+console.log(passenger1.getGate());
 
 
 

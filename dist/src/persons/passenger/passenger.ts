@@ -47,14 +47,14 @@ export class Passengers extends Persons{
         }
     } 
 
-    getGate(){
-        for (let trip of this.Booking){
-            for (let flight of trip.Trip){
-                for (let gate of flight.Flights){
-                    return ('Passenger ' + this.FirstName +' '+ this.LastName + ', your plane is waiting gate number: ' +gate.Gate.gateNumber); 
+    getGate() {
+        console.log('Passenger: ', this.FirstName+' '+this.LastName, 'You flight gate: ')
+        for (let booking of this.Booking) {
+            for (let trip of booking.Trip) {
+                for (let flight of trip.Flights) {
+                    console.log('Flight ID:', flight.FlightId, 'Gate:', flight.Gate);
                 }
             }
         }
-        
     }
 }
