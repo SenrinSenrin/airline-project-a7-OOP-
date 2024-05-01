@@ -7,13 +7,13 @@ import { Booking } from "./Booking/booking";
 import { Tickets } from "./Tickets/ticket";
 import { Flight } from "./Flight/flight";
 import { Routs } from "./Flight/Route";
-import { Genders } from "./persons/person";
+import { Genders } from "./persons/Person";
 import { Airlines } from "./Airline/ailine";
 import { Pilot } from "./persons/Employees/Pilot";
 import { Mananger } from "./persons/Employees/Mananger";
 import { Chef } from "./persons/Employees/Chef";
 import { Gate } from "./Flight/Gate";
-import { Baggage } from "./Persons/Passenger/Baggage";
+import { Baggage } from "./persons/passenger/Baggage";
 
 // _____________________ENUMS_____________________________//
 import { Bookingtype } from "./Tickets/ticket";

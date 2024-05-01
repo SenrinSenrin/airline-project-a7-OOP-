@@ -1,8 +1,8 @@
-import { Persons } from "../person";
+import { Persons } from "../Person";
 import { Baggage } from "./Baggage";
 import { Booking } from "../../Booking/booking"
 
-import { Genders } from "../person";
+import { Genders } from "../Person";
 export class Passengers extends Persons{
     protected Booking: Booking[] = [];
     Baggage: Baggage[] = [];

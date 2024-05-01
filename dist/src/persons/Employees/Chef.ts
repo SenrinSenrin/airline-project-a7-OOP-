@@ -1,6 +1,6 @@
 
 import { Employee, EmployeeRole } from "./Employee";
-import { Genders } from "../person";
+import { Genders } from "../Person";
 import { Meals } from "../../Meals/meal";
 import { Flight } from "../../Flight/flight";
 

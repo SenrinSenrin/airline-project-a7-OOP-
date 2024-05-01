@@ -1,7 +1,7 @@
 import { Passengers } from "../persons/passenger/passenger";
 import { Trips } from "../Flight/Trip";
 import { Tickets } from "../Tickets/ticket";
-import { Baggage } from "../Persons/Passenger/Baggage";
+import { Baggage } from "../persons/passenger/Baggage";
 import { Flight } from "../Flight/flight";
 
 
