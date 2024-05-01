@@ -12,6 +12,7 @@ import { Airlines } from "./Airline/ailine";
 import { Pilot } from "./Persons/Employees/Pilot";
 import { Mananger } from "./Persons/Employees/Mananger";
 import { Gate } from "./Flight/Gate";
+import { Baggage } from "./Persons/Passenger/Baggage";
 
 // _____________________ENUMS_____________________________//
 import { Bookingtype } from "./Tickets/ticket";
@@ -53,6 +54,10 @@ let flight1 = new Flight(FlightId.F001Boeing, gate1, AirplaneType.Boeing737, dat
 let ticket1 = new Tickets("T001BK", Bookingtype.NORETURNTICKET);
 let ticket2 = new Tickets("T001BJ", Bookingtype.RETURNTICKET);
 
+// ____________________________CREATE-BAGGAGE_______________________________//
+let baggage1 = new Baggage(1,'20Kg')
+
+
 // _______________________________CREATE-AIRLINES______________________________//
 let airline1 = new Airlines("Cambodia Airline");
 
@@ -61,6 +66,7 @@ let pilot1 = new Pilot("Dity", "Trav", 24, Genders.Male, 1243, EmployeeRole.Pilo
 let mananger = new Mananger("Serin", "Sing", 23, Genders.Male, 1233, EmployeeRole.Manager);
 
 // ===============================CALL-FUNCTIONS===========================
+
 // __________________________________TRIPS-METHOD_______________________________//
 trip1.addFlight(flight1);
 trip1.addBooking(booking1);
@@ -69,9 +75,12 @@ trip1.addBooking(booking1);
 booking1.addTrip(trip1);
 booking1.addTicket(ticket1);
 booking1.addPassenger(passenger1);
+booking1.addBaggage(baggage1);
+booking1.addFlight(flight1)
 
 // __________________________________PASSENGER-METHOD_______________________________//
 passenger1.addBooking(booking1);
+passenger1.addBaggage(baggage1);
 
 // __________________________________AIRLINES-METHOD_______________________________//
 airline1.addTrip(trip1);
@@ -97,10 +106,10 @@ airport.addGate(gate1);
 /*USER STORY 2->
 // =================2. As an airline manager, I want to know for a given flight, how many passengers have return 
 // tickets.=============*/
+
 console.log(airline1.getFlightNumPassReturn());
 console.log(airline1);
-
-
+console.log(booking1)
 
 
 /*USER STORY 3->
