@@ -27,4 +27,19 @@ export class Employee extends Persons {
     getSalary(): number {
         return this.Salary;
     }
+    getFullName(): string {
+        return this.FirstName + " " + this.LastName;
+    }
+
+    getEmployeeInfor(): string {
+        return +
+        "Name: "+this.FirstName + " " + this.LastName + "\n" +
+        "Age: "+this.Age + "\n"+
+        "Gender: "+this.Gender + "\n" +
+        "Salary: "+this.Salary + "\n" +
+        "Department: "+this.department + "\n" +
+        "Flight number: "+this.Flights.length + "\n" +
+        "Orther: "+this.Flights.map(f => f.FlightId).join("\n") + "\n" 
+        ;
+    }
 }

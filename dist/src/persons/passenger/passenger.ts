@@ -57,4 +57,12 @@ export class Passengers extends Persons{
             }
         }
     }
+
+    getPassDetails(): string {
+        return +
+        "Name: "+this.FirstName + " " + this.LastName + "\n" +
+        "Age: "+this.Age + "\n"+
+        "Gender: "+this.Gender + "\n" 
+        ;
+    }
 }
