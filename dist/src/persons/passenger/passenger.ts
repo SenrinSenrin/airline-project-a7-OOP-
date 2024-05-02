@@ -4,10 +4,12 @@ import { Booking } from "../../Booking/booking"
 
 import { Genders } from "../Person";
 export class Passengers extends Persons{
+    protected passengerId: string;
     protected Booking: Booking[] = [];
     Baggage: Baggage[] = [];
     constructor(passengerId: string, FirstName: string, LastName: string, Age: number, Gender: Genders){
         super(FirstName, LastName, Age, Gender)
+        this.passengerId = passengerId;
     }
     
     addBooking(booking: Booking){
