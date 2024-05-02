@@ -1,19 +1,33 @@
 import { Passengers } from "./passenger";
+import { Flight } from "../../Flight/flight";
 
-export class Baggage{
-    private BaggageId: number
-    private PassengerId: string
-    private FlightId: string
-    constructor(BaggageId:number, flightId: string){
-        this.BaggageId = BaggageId
-        this.FlightId = flightId
-        this.PassengerId = ''
+export class Baggage {
+    BaggageId: number;
+    passengerId: Passengers[];
+    baggageWeight: string;
+
+    constructor(BaggageId: number, bagWeight: string) {
+        this.BaggageId = BaggageId;
+        this.baggageWeight = bagWeight;
+
     }
 
-    getPassengerId(passId){
-        this.PassengerId = passId
+    getPassengerId() {
+        return this.passengerId;
     }
-    public BaggageDetails(){}
-    public BaggageStatus(){}
 
+    public getBaggageDetails() {
+        return {
+            BaggageId: this.BaggageId,
+            baggageWeight: this.baggageWeight
+        };
+    }
+
+    public BaggageStatus() {
+        return {
+            BaggageId: this.BaggageId,
+            baggageWeight: this.baggageWeight
+        };
+    }
 }
+

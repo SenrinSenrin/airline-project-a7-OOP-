@@ -13,6 +13,10 @@ import { Pilot } from "./Persons/Employees/Pilot";
 import { Mananger } from "./Persons/Employees/Mananger";
 import { Chef } from "./Persons/Employees/Chef";
 import { Gate } from "./Flight/Gate";
+import { Baggage } from "./Persons/Passenger/Baggage";
+import { Layout } from "./Flight/Layout";
+import { Seat,SeatType } from "./Flight/Seat";
+import { Airplane } from "./Flight/Airplan";
 
 // _____________________ENUMS_____________________________//
 import { Bookingtype } from "./Tickets/ticket";
@@ -75,6 +79,10 @@ let ticket2 = new Tickets("T002", Bookingtype.RETURNTICKET);
 let ticket3 = new Tickets("T003", Bookingtype.NORETURNTICKET);
 let ticket4 = new Tickets("T004", Bookingtype.RETURNTICKET);
 
+// ____________________________CREATE-BAGGAGE_______________________________//
+let baggage1 = new Baggage(1,'20Kg')
+
+
 // _______________________________CREATE-AIRLINES______________________________//
 let airline1 = new Airlines("Cambodia Airline");
 
@@ -90,11 +98,24 @@ let chef1 = new Chef("Dity", "Trav", 24, Genders.Male, 1243, EmployeeRole.Chef);
 // _______________________________CREATE-MEALS______________________________//
 let meal1 = new Meals("Koko",mealTypes.kosher);
 
+// _______________________________CREATE-SEAT______________________________//
+let seatNumber1 = new Seat(1,SeatType.businessClass);
+let seatNumber2 = new Seat(2,SeatType.economyClass);
+// _______________________________CREATE-lAYOUT______________________________//
+let layouts = new Layout(12,12)
+// _______________________________ADD-SEAT-LAYOUT______________________________//
+layouts.addSeat(seatNumber1);
+layouts.addSeat(seatNumber2);
 
+// _______________________________CREATE AIRPLANE______________________________//
 
+let airplanName = new Airplane('Cambodia Airline');
 
+airplanName.addFlight(flight1);
+airplanName.addLayout(layouts);
 
 // ===============================CALL-FUNCTIONS===========================
+
 // __________________________________TRIPS-METHOD_______________________________//
 trip1.addFlight(flight1);
 trip1.addFlight(flight2);
@@ -128,6 +149,12 @@ passenger1.addBooking(booking1);
 passenger2.addBooking(booking2);
 passenger3.addBooking(booking3);
 passenger4.addBooking(booking4);
+booking1.addBaggage(baggage1);
+booking1.addFlight(flight1)
+
+// __________________________________PASSENGER-METHOD_______________________________//
+passenger1.addBooking(booking1);
+passenger1.addBaggage(baggage1);
 
 // __________________________________AIRLINES-METHOD_______________________________//
 airline1.addAirplane(AirplaneType.Boeing737);
@@ -166,10 +193,12 @@ chef1.addFlight(flight4);
 /*USER STORY 2->
 // =================2. As an airline manager, I want to know for a given flight, how many passengers have return 
 // tickets.=============*/
+
 console.log(airline1.getFlightNumPassReturn());
-// console.log(airline1);
-
-
+console.log(airline1);
+console.log(booking1)
+console.log(layouts);
+console.log(airplanName);
 
 
 /*USER STORY 3->

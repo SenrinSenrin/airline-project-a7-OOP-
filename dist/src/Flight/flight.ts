@@ -22,7 +22,7 @@ export enum AirplaneType {
     Boeing807,
     Boeing817,
     Boeing827,
-} 
+}
 
 export class Flight {
     FlightId: FlightId;
@@ -32,7 +32,7 @@ export class Flight {
     ReachingTime: Date;
     Destination: Routs;
 
-    constructor(FlightId: FlightId,gate:Gate, Airplane: AirplaneType, StartingTime: Date, ReachingTime: Date, routes: Routs) {
+    constructor(FlightId: FlightId, gate: Gate, Airplane: AirplaneType, StartingTime: Date, ReachingTime: Date, routes: Routs) {
         this.FlightId = FlightId;
         this.Gate = gate;
         this.Airplane = Airplane;
@@ -41,5 +41,14 @@ export class Flight {
         this.Destination = routes;
     }
 
-    public FlightDetails(){}; //get flight details
+    public FlightDetails() {
+        return {
+            FlightId: this.FlightId,
+            Gate: this.Gate,
+            Airplane: this.Airplane,
+            StartingTime: this.StartingTime,
+            ReachingTime: this.ReachingTime,
+            Destination: this.Destination,
+        }
+    }; //get flight details
 }
