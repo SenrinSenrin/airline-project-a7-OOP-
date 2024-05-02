@@ -65,10 +65,10 @@ let mananger = new Mananger("Serin", "Sing", 23, Genders.Male, 1233, EmployeeRol
 
 
 // _______________________________CREATE-CHEFS______________________________//
-let chef1 = new Chef("Dity", "Trav", 24, Genders.Male, 1243, EmployeeRole.Chef);
+let chef1 = new Chef("Dit", "A7", 24, Genders.Male, 1243, EmployeeRole.Chef);
 
 // _______________________________CREATE-MEALS______________________________//
-let meal1 = new Meals("Koko",mealTypes.kosher);
+let meal1 = new Meals("Soup",mealTypes.kosher);
 
 
 
@@ -98,14 +98,15 @@ airline1.addEmployee(mananger);
 pilot1.addFlight(flight1);
 
 // __________________________________CHEFS-METHOD_______________________________//
+// chef1.addFlight(flight1);
 chef1.addMeals(meal1);
-chef1.addFlight(flight1);
+
 
 
 // USER STORY 1->
 // =================1. As an airport controller, I need to get the full details of a passenger’s trip from their Booking 
 // Reference Number (flights, bags, customer information…)==============
-// passenger1.getPassengerFullDetails();
+passenger1.getPassengerFullDetails();
 
 
 /*USER STORY 2->
@@ -119,7 +120,7 @@ console.log(airline1);
 
 /*USER STORY 3->
 // =================3. As an airline pilot, I want to know, for a given date, how many flights I have to join==============*/
-// pilot1.getFlightCountByTime();
+pilot1.getFlightCountByTime();
 
 
 
@@ -128,21 +129,21 @@ console.log(airline1);
 prepare.============
 
 */
+// console.log(chef1.getDetailChef(chef1));
 console.log(chef1);
-
 
 
 
 
 /*USER STORY 5->
 =================5. As an airline manager, I want to find out how much salary I pay all my employees.============*/
-// console.log(airline1.getTotalSalariesOfEmployees());
+console.log(airline1.getTotalSalariesOfEmployees());
 
 
 /*USER STORY 6->
 ===================6. As a passenger, I want to know which gate my plane is waiting at.
 =================*/
-// console.log(passenger1.getGate());
+console.log(passenger1.getGate());
 
 
 

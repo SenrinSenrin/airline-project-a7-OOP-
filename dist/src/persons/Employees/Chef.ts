@@ -18,4 +18,19 @@ export class Chef extends Employee{
         
     };
 
+    //==================function add meals=====================
+    getDetailChef(chef:Chef){
+        return {
+            FirstName: chef.FirstName,
+            LastName: chef.LastName,
+            Age: chef.Age,
+            Gender: chef.Gender,
+            Salary: chef.Salary,
+            department: chef.department,
+            meals: chef.meals,
+            
+        }
+        
+    };
+
 }
