@@ -14,6 +14,9 @@ import { Mananger } from "./persons/Employees/Mananger";
 import { Chef } from "./persons/Employees/Chef";
 import { Gate } from "./Flight/Gate";
 import { Baggage } from "./persons/passenger/Baggage";
+import { Layout } from "./Flight/Layout";
+import { Seat,SeatType } from "./Flight/Seat";
+import { Airplane } from "./Flight/Airplan";
 
 // _____________________ENUMS_____________________________//
 import { Bookingtype } from "./Tickets/ticket";
@@ -75,9 +78,21 @@ let chef1 = new Chef("Dity", "Trav", 24, Genders.Male, 1243, EmployeeRole.Chef);
 // _______________________________CREATE-MEALS______________________________//
 let meal1 = new Meals("Koko",mealTypes.kosher);
 
+// _______________________________CREATE-SEAT______________________________//
+let seatNumber1 = new Seat(1,SeatType.businessClass);
+let seatNumber2 = new Seat(2,SeatType.economyClass);
+// _______________________________CREATE-lAYOUT______________________________//
+let layouts = new Layout(12,12)
+// _______________________________ADD-SEAT-LAYOUT______________________________//
+layouts.addSeat(seatNumber1);
+layouts.addSeat(seatNumber2);
 
+// _______________________________CREATE AIRPLANE______________________________//
 
+let airplanName = new Airplane('Cambodia Airline');
 
+airplanName.addFlight(flight1);
+airplanName.addLayout(layouts);
 
 // ===============================CALL-FUNCTIONS===========================
 
@@ -124,6 +139,8 @@ chef1.addFlight(flight1);
 console.log(airline1.getFlightNumPassReturn());
 console.log(airline1);
 console.log(booking1)
+console.log(layouts);
+console.log(airplanName);
 
 
 /*USER STORY 3->
