@@ -44,13 +44,13 @@ export class Airlines {
                 }
                 
             }
-            return (
-                'From ['+this.Name + '] has:' + '\n'+
-                'Flight number:' + flightNumber + '\n'+
-                'Passenger returnt back number:' + passReturnNumber
-            )
             
         }
+        return (
+            'From ['+this.Name + '] has:' + '\n'+
+            'Flight number:' + flightNumber + '\n'+
+            'Passenger returnt back number:' + passReturnNumber
+        )
     }
     getPassengers(){
         for (let passReturn of this.Trips){
@@ -65,5 +65,21 @@ export class Airlines {
             totalSalary += employee.getSalary();
         }
         return `${this.Name} need to pay $${totalSalary} per month for employee!`;
+    }
+
+    airlineDetails(){
+        let employeeNames = [];
+        for (let employee of this.Employees){
+            employeeNames.push(employee.getFullName());
+        }
+        return `${this.Name} has ${this.Employees.length} employees and ${this.Trips.length} trips! \n ${employeeNames.join(', ')} employees!`;
+    }
+
+    getEmployeeDetails(){
+        let employeeNames = [];
+        for (let employee of this.Employees){
+            employeeNames.push(employee.getEmployeeInfor());
+        }
+        return `Employee in ${this.Name} has ${employeeNames.join(', ')} employees!`;
     }
 }
